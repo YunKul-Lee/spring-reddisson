@@ -13,19 +13,11 @@ import java.util.List;
 @Configuration
 public class RedissonConfig {
 
-//    @Value("${spring.redis.host:localhost}")
-//    private String redisHost;
-//
-//    @Value("${spring.redis.port:6379}")
-//    private int redisPort;
-
     @Value("${redis.mode:SINGLE}")
     private String mode;
 
     @Value("${redis.nodes:redis://localhost:6379}")
     private String[] nodes;
-
-//    private static final String REDISSON_HOST_PREFIX = "redis://";
 
     @Bean
     public RedissonClient redissonClient() {
